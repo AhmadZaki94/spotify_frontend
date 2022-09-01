@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import logo from './logo.svg';
+import { useState } from "react";
+import "./App.css";
+import { Listing } from "./component/Listing";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import { AddNewSong } from './component/AddNewSong';
+import { Artist } from "./component/Artist";
 function App() {
+  const [show, setShow] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box mt='20px'>
+        {show ? (
+          <Button variant="contained" onClick={() => setShow(!show)}>
+            Go To Home
+          </Button>
+
+        ) : (
+          <Button variant="contained" onClick={() => setShow(!show)}>
+          + Add Song
+        </Button>
+        )}
+      </Box>
+      <Box mt="20px" border={"1px solid white"}>
+        {show ? <AddNewSong /> : <Listing />}
+      </Box>
+
+     {!show ?  <Artist/> : ""}
     </div>
   );
 }
