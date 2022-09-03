@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, InputLabel, TextField } from '@mui/material';
+import { Box, Button, FormControl, TextField } from '@mui/material';
 import axios from 'axios';
 import { useState } from 'react';
 import { BasicModal } from './BasicModal';
@@ -42,32 +42,27 @@ export const AddNewSong = () => {
           <form onSubmit={handleSubmit}>
             <Box>
               <FormControl>
-                <InputLabel htmlFor="my-input">Song Name</InputLabel>
-                <TextField value={form.name} onChange={handleChange} name="name" id="my-input" aria-describedby="my-helper-text" />
+                <TextField value={form.name} onChange={handleChange} name="name" id="my-input" aria-describedby="my-helper-text" placeholder='Song Name' />
               </FormControl>
             </Box>
             <Box mt="25px">
               <FormControl>
-                <InputLabel htmlFor="my-input">Date Released</InputLabel>
-                <TextField value={form.release_date} onChange={handleChange} name="release_date" id="my-input" aria-describedby="my-helper-text" />
+                <TextField value={form.release_date} onChange={handleChange} name="release_date" id="my-input" aria-describedby="my-helper-text" placeholder='Date Released' />
               </FormControl>
             </Box>
             <Box mt="25px">
               <FormControl>
-                <InputLabel htmlFor="my-input">Art Work</InputLabel>
-                <TextField value={form.cover_image} onChange={handleChange} name="cover_image" id="my-input" aria-describedby="my-helper-text" />
+                <TextField value={form.cover_image} onChange={handleChange} type='file' name="cover_image" id="my-input" aria-describedby="my-helper-text" placeholder='Art Work' />
               </FormControl>
             </Box>
             <Box mt="25px">
               <FormControl>
-                <InputLabel htmlFor="my-input">Artists</InputLabel>
-                <TextField value={form.artist} onChange={handleChange} name="artist" id="my-input" aria-describedby="my-helper-text" />
+                <TextField value={form.artist} onChange={handleChange} name="artist" id="my-input" aria-describedby="my-helper-text" placeholder='Artists' />
               </FormControl>
             </Box>
             <Box mt="25px">
               <FormControl>
-                <InputLabel htmlFor="my-input">Rating</InputLabel>
-                <TextField value={form.rating} onChange={handleChange} name="rating" id="my-input" aria-describedby="my-helper-text" />
+                <TextField value={form.rating} onChange={handleChange} name="rating" id="my-input" aria-describedby="my-helper-text" placeholder='Rating' />
               </FormControl>
             </Box>
             <Box display='flex' border='1px solid white' m='auto' marginTop='25px' width='275px' justifyContent='space-evenly'>

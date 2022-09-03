@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import axios from 'axios';
-import { FormControl, InputLabel, TextField } from '@mui/material';
+import { FormControl, TextField } from '@mui/material';
 
 const style = {
   position: 'absolute',
@@ -68,21 +68,22 @@ export const BasicModal = () => {
             <form onSubmit={handleSubmit}>
               <Box mt='25px'>  
                 <FormControl>
-                  <InputLabel htmlFor="my-input">Artist Name</InputLabel>
-                  <TextField value={formData.name} onChange={handleChange} name="name" id="my-input" aria-describedby="my-helper-text" />
+                  <TextField value={formData.name} onChange={handleChange} name="name" id="my-input" aria-describedby="my-helper-text" placeholder='Artist Name' />
                 </FormControl>
               </Box>
               <Box mt='25px'>  
                 <FormControl>
-                  <InputLabel htmlFor="my-input">Date Of Birth</InputLabel>
-                  <TextField value={formData.dob} onChange={handleChange} name="dob" id="my-input" aria-describedby="my-helper-text" />
+                  <TextField value={formData.dob} onChange={handleChange} name="dob" id="my-input" aria-describedby="my-helper-text" placeholder='Date Of Birth' />
                 </FormControl>
               </Box>
               <Box mt='25px'>  
                 <FormControl>
-                  <InputLabel htmlFor="my-input">Bio</InputLabel>
-                  <TextField value={formData.bio} onChange={handleChange} name="bio" id="my-input" aria-describedby="my-helper-text" />
+                  <TextField value={formData.bio} onChange={handleChange} name="bio" id="my-input" aria-describedby="my-helper-text" placeholder='Bio' />
                 </FormControl>
+              </Box>
+
+              <Box mt='25px'>
+                <TextField type='submit' value='Submit'/>
               </Box>
             </form>
           </Typography>
