@@ -77,7 +77,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
                 <StyledTableCell>{e.release_date}</StyledTableCell>
                 <StyledTableCell>{e.artist_id[0].name}</StyledTableCell>
                 <StyledTableCell>
-                  <Rating name="half-rating-read" defaultValue={e.rating} precision={1} readOnly /></StyledTableCell>
+                  {/* <Rating name="half-rating-read" defaultValue={e.rating} precision={1} readOnly /> */}
+                  <Rating />
+                </StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
