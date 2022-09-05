@@ -8,7 +8,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { useEffect, useState } from "react"
-import { Rating } from "@mui/material";
+// import { Rating } from "@mui/material";
+import Rating from './Rating';
 
 export const Listing = () => {
 
